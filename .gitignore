@@ -62,3 +62,4 @@ publish/
 *.zip
 *.tar.gz
 *.rar
+*.sln.iml
