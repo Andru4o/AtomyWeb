@@ -116,3 +116,4 @@ C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net9.0\AtomyWeb.genruntime
 C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net9.0\ref\AtomyWeb.dll
 C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net9.0\compressed\hurhtm3dp6-eckgd69l07.gz
 C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net9.0\AtomyWeb.sourcelink.json
+C:\Users\Андрей\source\repos\AtomyWeb\bin\Debug\net9.0\stylecop.json

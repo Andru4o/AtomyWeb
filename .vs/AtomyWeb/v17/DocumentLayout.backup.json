@@ -3,56 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\pages\\privacy.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\pages\\privacy.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\pages\\terms.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\pages\\terms.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\services\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:services\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\wwwroot\\data\\reviews.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:wwwroot\\data\\reviews.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\services\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:services\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\services\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:services\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\atomyweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:atomyweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\catalogitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\catalogitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\videoplayer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\videoplayer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\wwwroot\\data\\reviews.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:wwwroot\\data\\reviews.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\videoplayer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\videoplayer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\resources\\sharedresource.ru.resx||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -71,23 +55,8 @@
       "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\contactform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:resources\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\atomyweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:atomyweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11CDC405-7214-456E-9CD3-D8A96FF46DBB}|..\\AtomyWeb.UnitTests\\AtomyWeb.UnitTests.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb.unittests\\reviewcarouselitemtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\components\\vkplayer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -102,9 +71,6 @@
       "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:wwwroot\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11CDC405-7214-456E-9CD3-D8A96FF46DBB}|..\\AtomyWeb.UnitTests\\AtomyWeb.UnitTests.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb.unittests\\e2e\\tests\\catalog.e2e.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\atomyweb\\bundleconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}|AtomyWeb.csproj|solutionrelative:bundleconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -116,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -132,104 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Privacy.razor",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Privacy.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Privacy.razor",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Privacy.razor",
-              "RelativeToolTip": "Components\\Pages\\Privacy.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T20:49:09.871Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Terms.razor",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Terms.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Terms.razor",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Terms.razor",
-              "RelativeToolTip": "Components\\Pages\\Terms.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T20:48:56.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Register.razor",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Register.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Register.razor",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Register.razor*",
-              "RelativeToolTip": "Components\\Pages\\Register.razor*",
-              "ViewState": "AgIAACoAAAAAAAAAAAAQwEAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T20:46:33.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "reviews.json",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\wwwroot\\data\\reviews.json",
-              "RelativeDocumentMoniker": "wwwroot\\data\\reviews.json",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\wwwroot\\data\\reviews.json",
-              "RelativeToolTip": "wwwroot\\data\\reviews.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-26T21:28:52.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReviewService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\ReviewService.cs",
-              "RelativeDocumentMoniker": "Services\\ReviewService.cs",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\ReviewService.cs",
-              "RelativeToolTip": "Services\\ReviewService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T21:27:48.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Index.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Index.razor",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Pages\\Index.razor",
-              "RelativeToolTip": "Components\\Pages\\Index.razor",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAQwLIAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-22T22:46:36.72Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Models.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\Models.cs",
               "RelativeDocumentMoniker": "Services\\Models.cs",
               "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\Models.cs",
               "RelativeToolTip": "Services\\Models.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T22:40:00.263Z"
+              "WhenOpened": "2025-04-24T22:40:00.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\IProductService.cs",
-              "RelativeDocumentMoniker": "Services\\IProductService.cs",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\IProductService.cs",
-              "RelativeToolTip": "Services\\IProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T22:37:52.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Shared\\MainLayout.razor",
               "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
@@ -237,23 +119,25 @@
               "RelativeToolTip": "Shared\\MainLayout.razor",
               "ViewState": "AgIAAAwAAAAAAAAAAAAYwEcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-22T22:52:23.094Z"
+              "WhenOpened": "2025-04-22T22:52:23.094Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\App.razor",
               "RelativeDocumentMoniker": "Components\\App.razor",
               "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\App.razor",
               "RelativeToolTip": "Components\\App.razor",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T11:53:42.705Z"
+              "WhenOpened": "2025-04-26T11:53:42.705Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 12,
               "Title": "ContactForm.razor",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\ContactForm.razor",
               "RelativeDocumentMoniker": "Components\\ContactForm.razor",
@@ -261,23 +145,51 @@
               "RelativeToolTip": "Components\\ContactForm.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T22:59:37.818Z"
+              "WhenOpened": "2025-04-24T22:59:37.818Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "VideoPlayer.razor",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\VideoPlayer.razor",
-              "RelativeDocumentMoniker": "Components\\VideoPlayer.razor",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\VideoPlayer.razor",
-              "RelativeToolTip": "Components\\VideoPlayer.razor",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwC0AAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AtomyWeb.csproj",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\AtomyWeb.csproj",
+              "RelativeDocumentMoniker": "AtomyWeb.csproj",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\AtomyWeb.csproj",
+              "RelativeToolTip": "AtomyWeb.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-25T20:14:45.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CatalogItem.razor",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\CatalogItem.razor",
+              "RelativeDocumentMoniker": "Components\\CatalogItem.razor",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\CatalogItem.razor",
+              "RelativeToolTip": "Components\\CatalogItem.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-25T22:12:16.056Z"
+              "WhenOpened": "2025-04-24T22:59:38.333Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T22:47:39.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "SharedResource.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Resources\\SharedResource.cs",
               "RelativeDocumentMoniker": "Resources\\SharedResource.cs",
@@ -285,47 +197,38 @@
               "RelativeToolTip": "Resources\\SharedResource.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T20:03:57.181Z"
+              "WhenOpened": "2025-04-25T20:03:57.181Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IReviewService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\IReviewService.cs",
-              "RelativeDocumentMoniker": "Services\\IReviewService.cs",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Services\\IReviewService.cs",
-              "RelativeToolTip": "Services\\IReviewService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T22:39:06.462Z"
+              "DocumentIndex": 6,
+              "Title": "reviews.json",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\wwwroot\\data\\reviews.json",
+              "RelativeDocumentMoniker": "wwwroot\\data\\reviews.json",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\wwwroot\\data\\reviews.json",
+              "RelativeToolTip": "wwwroot\\data\\reviews.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-26T21:28:52.494Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CatalogItem.razor",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\CatalogItem.razor",
-              "RelativeDocumentMoniker": "Components\\CatalogItem.razor",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\CatalogItem.razor",
-              "RelativeToolTip": "Components\\CatalogItem.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "VideoPlayer.razor",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\VideoPlayer.razor",
+              "RelativeDocumentMoniker": "Components\\VideoPlayer.razor",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\VideoPlayer.razor",
+              "RelativeToolTip": "Components\\VideoPlayer.razor",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwC0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T22:59:38.333Z"
+              "WhenOpened": "2025-04-25T22:12:16.056Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AtomyWeb.csproj",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\AtomyWeb.csproj",
-              "RelativeDocumentMoniker": "AtomyWeb.csproj",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\AtomyWeb.csproj",
-              "RelativeToolTip": "AtomyWeb.csproj",
-              "ViewState": "AgIAAAcAAAAAAAAAAIBpwBkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-25T20:14:45.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 15,
               "Title": "ci.yml",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\ci.yml",
               "RelativeDocumentMoniker": "ci.yml",
@@ -333,23 +236,25 @@
               "RelativeToolTip": "ci.yml",
               "ViewState": "AgIAABAAAAAAAAAAAAAIwCIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-04-24T23:46:10.857Z"
+              "WhenOpened": "2025-04-24T23:46:10.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "SharedResource.ru.resx",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Resources\\SharedResource.ru.resx",
               "RelativeDocumentMoniker": "Resources\\SharedResource.ru.resx",
               "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Resources\\SharedResource.ru.resx",
               "RelativeToolTip": "Resources\\SharedResource.ru.resx",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAD4AAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAABBwD4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-25T21:23:20.314Z"
+              "WhenOpened": "2025-04-25T21:23:20.314Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 11,
               "Title": "ReviewCarouselItem.razor",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\ReviewCarouselItem.razor",
               "RelativeDocumentMoniker": "Components\\ReviewCarouselItem.razor",
@@ -357,11 +262,12 @@
               "RelativeToolTip": "Components\\ReviewCarouselItem.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T22:59:43.543Z"
+              "WhenOpened": "2025-04-24T22:59:43.543Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "Routes.razor",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "Components\\Routes.razor",
@@ -369,23 +275,12 @@
               "RelativeToolTip": "Components\\Routes.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T22:07:29.143Z"
+              "WhenOpened": "2025-04-24T22:07:29.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ReviewCarouselItemTests.cs",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb.UnitTests\\ReviewCarouselItemTests.cs",
-              "RelativeDocumentMoniker": "..\\AtomyWeb.UnitTests\\ReviewCarouselItemTests.cs",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb.UnitTests\\ReviewCarouselItemTests.cs",
-              "RelativeToolTip": "..\\AtomyWeb.UnitTests\\ReviewCarouselItemTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T23:36:16.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 13,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "Components\\_Imports.razor",
@@ -393,23 +288,12 @@
               "RelativeToolTip": "Components\\_Imports.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T22:29:03.431Z"
+              "WhenOpened": "2025-04-24T22:29:03.431Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T22:47:39.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 14,
               "Title": "VkPlayer.razor",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\Components\\VkPlayer.razor",
               "RelativeDocumentMoniker": "Components\\VkPlayer.razor",
@@ -417,11 +301,12 @@
               "RelativeToolTip": "Components\\VkPlayer.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T22:30:15.434Z"
+              "WhenOpened": "2025-04-24T22:30:15.434Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 16,
               "Title": "manifest.json",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\wwwroot\\manifest.json",
               "RelativeDocumentMoniker": "wwwroot\\manifest.json",
@@ -429,23 +314,12 @@
               "RelativeToolTip": "wwwroot\\manifest.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T23:11:41.418Z"
+              "WhenOpened": "2025-04-24T23:11:41.418Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "catalog.e2e.js",
-              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb.UnitTests\\e2e\\tests\\catalog.e2e.js",
-              "RelativeDocumentMoniker": "..\\AtomyWeb.UnitTests\\e2e\\tests\\catalog.e2e.js",
-              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb.UnitTests\\e2e\\tests\\catalog.e2e.js",
-              "RelativeToolTip": "..\\AtomyWeb.UnitTests\\e2e\\tests\\catalog.e2e.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-24T23:38:37.406Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 17,
               "Title": "bundleconfig.json",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\AtomyWeb\\bundleconfig.json",
               "RelativeDocumentMoniker": "bundleconfig.json",
@@ -453,7 +327,8 @@
               "RelativeToolTip": "bundleconfig.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T23:11:12.271Z"
+              "WhenOpened": "2025-04-24T23:11:12.271Z",
+              "EditorCaption": ""
             }
           ]
         }

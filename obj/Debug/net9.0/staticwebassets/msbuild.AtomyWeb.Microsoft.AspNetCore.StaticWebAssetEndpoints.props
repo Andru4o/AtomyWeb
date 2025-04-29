@@ -76,13 +76,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AtomyWeb.m8iaz286wu.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1sXDC4Z16NwfAAOm23Nj4gEAkcldNQoca4TD991Z/qc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5952"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221sXDC4Z16NwfAAOm23Nj4gEAkcldNQoca4TD991Z/qc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 26 Apr 2025 18:10:42 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5952"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221sXDC4Z16NwfAAOm23Nj4gEAkcldNQoca4TD991Z/qc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Apr 2025 21:47:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AtomyWeb/AtomyWeb.m8iaz286wu.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AtomyWeb.m8iaz286wu.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m8iaz286wu"},{"Name":"integrity","Value":"sha256-1sXDC4Z16NwfAAOm23Nj4gEAkcldNQoca4TD991Z/qc="},{"Name":"label","Value":"_content/AtomyWeb/AtomyWeb.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5952"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221sXDC4Z16NwfAAOm23Nj4gEAkcldNQoca4TD991Z/qc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 26 Apr 2025 18:10:42 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5952"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221sXDC4Z16NwfAAOm23Nj4gEAkcldNQoca4TD991Z/qc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Apr 2025 21:47:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AtomyWeb/data/products.json">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\products.json'))</AssetFile>

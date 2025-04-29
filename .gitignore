@@ -1,0 +1,45 @@
+﻿# output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE
+.vs/
+.idea/
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+.packages/
+.nuget/
+
+# ASP.NET / Blazor
+wwwroot/lib/
+wwwroot/css/*.min.css
+wwwroot/js/*.min.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# JetBrains Rider
+*.DotSettings.user
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+docker-compose*.yml
+
+# Misc
+*.env
