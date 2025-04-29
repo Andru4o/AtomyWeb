@@ -4,6 +4,7 @@ obj/
 
 # User-specific files
 *.user
+*.userprefs
 *.suo
 *.userosscache
 *.sln.docstates
@@ -18,6 +19,7 @@ obj/
 *.snupkg
 .packages/
 .nuget/
+.nuget/packages/
 
 # ASP.NET / Blazor
 wwwroot/lib/
@@ -25,6 +27,7 @@ wwwroot/css/*.min.css
 wwwroot/js/*.min.js
 node_modules/
 npm-debug.log*
+yarn-debug.log*
 yarn-error.log
 
 # JetBrains Rider
@@ -40,6 +43,22 @@ Thumbs.db
 # Docker
 Dockerfile
 docker-compose*.yml
+docker-compose.override.yml
 
 # Misc
 *.env
+.ReSharper
+*.dotCover
+*.code-workspace
+*.tgz
+secrets.json
+*.local
+tmp/
+coverage/
+publish/
+*.dbmdl
+*.bak
+*.backup
+*.zip
+*.tar.gz
+*.rar
