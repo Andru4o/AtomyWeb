@@ -1,0 +1,319 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "Microsoft.Net.Sdk.Compilers.Toolset/9.0.203": {
+        "type": "package"
+      },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.2": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Net.Sdk.Compilers.Toolset/9.0.203": {
+      "sha512": "0pMD9zxsKwwbFdGdAeMzpEBelVoOU5YG/e5xnXGfv36MaH37bpSqPr8iYy8BkJT00kfkegdILb43nf/xRMDd6Q==",
+      "type": "package",
+      "path": "microsoft.net.sdk.compilers.toolset/9.0.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "Microsoft.Build.Tasks.CodeAnalysis.dll",
+        "Microsoft.CSharp.Core.targets",
+        "Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "Microsoft.CodeAnalysis.CSharp.dll",
+        "Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll",
+        "Microsoft.CodeAnalysis.Scripting.dll",
+        "Microsoft.CodeAnalysis.VisualBasic.dll",
+        "Microsoft.CodeAnalysis.dll",
+        "Microsoft.DiaSymReader.Native.amd64.dll",
+        "Microsoft.DiaSymReader.Native.arm64.dll",
+        "Microsoft.DiaSymReader.Native.x86.dll",
+        "Microsoft.Managed.Core.CurrentVersions.targets",
+        "Microsoft.Managed.Core.targets",
+        "Microsoft.VisualBasic.Core.targets",
+        "System.Buffers.dll",
+        "System.Collections.Immutable.dll",
+        "System.Memory.dll",
+        "System.Numerics.Vectors.dll",
+        "System.Reflection.Metadata.dll",
+        "System.Runtime.CompilerServices.Unsafe.dll",
+        "System.Text.Encoding.CodePages.dll",
+        "System.Threading.Tasks.Extensions.dll",
+        "VBCSCompiler.exe",
+        "VBCSCompiler.exe.config",
+        "cs/cs/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "cs/cs/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "cs/cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "cs/cs/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "cs/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "cs/cs/Microsoft.CodeAnalysis.resources.dll",
+        "csc.exe",
+        "csc.exe.config",
+        "csc.rsp",
+        "csi.exe",
+        "csi.exe.config",
+        "csi.rsp",
+        "de/de/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "de/de/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "de/de/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "de/de/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "de/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "de/de/Microsoft.CodeAnalysis.resources.dll",
+        "es/es/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "es/es/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "es/es/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "es/es/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "es/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "es/es/Microsoft.CodeAnalysis.resources.dll",
+        "fr/fr/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "fr/fr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "fr/fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "fr/fr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "fr/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "fr/fr/Microsoft.CodeAnalysis.resources.dll",
+        "it/it/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "it/it/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "it/it/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "it/it/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "it/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "it/it/Microsoft.CodeAnalysis.resources.dll",
+        "ja/ja/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "ja/ja/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "ja/ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "ja/ja/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "ja/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "ja/ja/Microsoft.CodeAnalysis.resources.dll",
+        "ko/ko/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "ko/ko/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "ko/ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "ko/ko/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "ko/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "ko/ko/Microsoft.CodeAnalysis.resources.dll",
+        "microsoft.net.sdk.compilers.toolset.9.0.203.nupkg.sha512",
+        "microsoft.net.sdk.compilers.toolset.nuspec",
+        "pl/pl/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "pl/pl/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "pl/pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "pl/pl/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "pl/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "pl/pl/Microsoft.CodeAnalysis.resources.dll",
+        "pt-BR/pt-BR/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "pt-BR/pt-BR/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "pt-BR/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "pt-BR/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "pt-BR/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "pt-BR/pt-BR/Microsoft.CodeAnalysis.resources.dll",
+        "ru/ru/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "ru/ru/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "ru/ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "ru/ru/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "ru/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "ru/ru/Microsoft.CodeAnalysis.resources.dll",
+        "tr/tr/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tr/tr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tr/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tr/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tr/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tr/tr/Microsoft.CodeAnalysis.resources.dll",
+        "vbc.exe",
+        "vbc.exe.config",
+        "vbc.rsp",
+        "zh-Hans/zh-Hans/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "zh-Hans/zh-Hans/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "zh-Hans/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "zh-Hans/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "zh-Hans/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "zh-Hans/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
+        "zh-Hant/zh-Hant/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "zh-Hant/zh-Hant/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "zh-Hant/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "zh-Hant/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "zh-Hant/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "zh-Hant/zh-Hant/Microsoft.CodeAnalysis.resources.dll"
+      ]
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.2": {
+      "sha512": "kN58RveGig9YjWAoYI3flDWC/jWCU0Xzzmp3f49fbnPwZLsVJu9qMt+VSrIz7I3Gn6jkeY1l7cVJopiRDOq3CQ==",
+      "type": "package",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.21.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "EULA.md",
+        "ThirdPartyNotices.txt",
+        "build/Container.props",
+        "build/Container.targets",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets",
+        "build/Rules/GeneralBrowseObject.xaml",
+        "build/Rules/cs-CZ/GeneralBrowseObject.xaml",
+        "build/Rules/de-DE/GeneralBrowseObject.xaml",
+        "build/Rules/es-ES/GeneralBrowseObject.xaml",
+        "build/Rules/fr-FR/GeneralBrowseObject.xaml",
+        "build/Rules/it-IT/GeneralBrowseObject.xaml",
+        "build/Rules/ja-JP/GeneralBrowseObject.xaml",
+        "build/Rules/ko-KR/GeneralBrowseObject.xaml",
+        "build/Rules/pl-PL/GeneralBrowseObject.xaml",
+        "build/Rules/pt-BR/GeneralBrowseObject.xaml",
+        "build/Rules/ru-RU/GeneralBrowseObject.xaml",
+        "build/Rules/tr-TR/GeneralBrowseObject.xaml",
+        "build/Rules/zh-CN/GeneralBrowseObject.xaml",
+        "build/Rules/zh-TW/GeneralBrowseObject.xaml",
+        "build/ToolsTarget.props",
+        "build/ToolsTarget.targets",
+        "icon.png",
+        "microsoft.visualstudio.azure.containers.tools.targets.1.21.2.nupkg.sha512",
+        "microsoft.visualstudio.azure.containers.tools.targets.nuspec",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Common.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Shared.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Tasks.dll",
+        "tools/Newtonsoft.Json.dll",
+        "tools/System.Security.Principal.Windows.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "Microsoft.Net.Sdk.Compilers.Toolset >= 9.0.203",
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Андрей\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\AtomyWeb.csproj",
+      "projectName": "AtomyWeb",
+      "projectPath": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\AtomyWeb.csproj",
+      "packagesPath": "C:\\Users\\Андрей\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Андрей\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://ams-nexus1.xbet.lan/repository/nuget-global/": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://thelist.pkgs.visualstudio.com/_packaging/TheListPlatform/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "Microsoft.Net.Sdk.Compilers.Toolset": {
+            "target": "Package",
+            "version": "[9.0.203, )"
+          },
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+            "target": "Package",
+            "version": "[1.21.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.203, 9.0.203]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

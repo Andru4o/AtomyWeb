@@ -1,0 +1,13 @@
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.Resources.SharedResource.resources
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.Resources.SharedResource.de.resources
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.Resources.SharedResource.es.resources
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.Resources.SharedResource.ja.resources
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.Resources.SharedResource.ko.resources
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.Resources.SharedResource.ru.resources
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.Resources.SharedResource.zh-CN.resources
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.csproj.GenerateResource.cache
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.AssemblyInfoInputs.cache
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.AssemblyInfo.cs
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\source\repos\AtomyWeb\obj\Debug\net8.0\AtomyWeb.MvcApplicationPartsAssemblyInfo.cache

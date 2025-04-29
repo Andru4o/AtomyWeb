@@ -1,0 +1,161 @@
+﻿@page "/register"
+@using AtomyWeb.Services
+@inject HttpClient Http
+@inject NavigationManager Nav
+@using System.Net.Http.Json
+
+<EditForm Model="model">
+  <h2 class="mb-4">Регистрация (бесплатно и ни к чему не обязывает!)</h2>
+
+  <div class="mb-4">
+    <div class="progress">
+      <div class="progress-bar" 
+           style="width:@(currentStep*25)%;">
+        Шаг @currentStep из 4
+      </div>
+    </div>
+  </div>
+
+  @if (!submitted)
+  {
+    @switch (currentStep)
+    {
+      case 1:
+        <div>
+          <label>Ваше ФИО</label>
+          <InputText class="form-control" @bind-Value="model.FullName" />
+        </div>
+        break;
+      case 2:
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Дата рождения</label>
+            <InputDate class="form-control" @bind-Value="model.BirthDate" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Email</label>
+            <InputText type="email" class="form-control" @bind-Value="model.Email" />
+          </div>
+        </div>
+        break;
+      case 3:
+        <div>
+          <label>Выберите пункт выдачи Atomy</label>
+          <InputSelect class="form-select" @bind-Value="model.PickupPoint">
+            <option value="">— выберите —</option>
+            @foreach(var p in pickupPoints)
+            {
+              <option value="@p">@p</option>
+            }
+          </InputSelect>
+        </div>
+        break;
+      case 4:
+        <div class="mb-3">
+          <label>Телефон</label>
+          <InputText type="tel" class="form-control" @bind-Value="model.Phone" />
+        </div>
+        @* <div class="mb-3">
+          <label>Удобный способ связи</label>
+          <div>
+            <InputRadio name="pref" @bind-Value="model.PreferredContact" Value="WhatsApp" /> WhatsApp
+            <InputRadio name="pref" @bind-Value="model.PreferredContact" Value="Telegram" class="ms-3" /> Telegram
+            <InputRadio name="pref" @bind-Value="model.PreferredContact" Value="SMS" class="ms-3" /> СМС
+          </div>
+        </div> *@
+        <div class="form-check mb-3">
+          <InputCheckbox class="form-check-input" @bind-Value="model.AgreeToTerms" />
+          <label class="form-check-label">
+            Я согласен с <a href="terms" target="_blank">пользовательским соглашением</a> и <a href="privacy" target="_blank">политикой обработки данных</a>
+          </label>
+        </div>
+        break;
+    }
+
+    <div class="d-flex justify-content-between mt-4">
+      <button class="btn btn-outline-secondary"
+              disabled="@(currentStep == 1)"
+              @onclick="Prev">Назад</button>
+
+      @if (currentStep < 4)
+      {
+        <button class="btn btn-primary"
+                disabled="@(!CanContinue)"
+                @onclick="Next">Далее</button>
+      }
+      else
+      {
+        <button class="btn btn-success"
+                disabled="@(!model.AgreeToTerms || isSubmitting)"
+                @onclick="Submit">Зарегистрироваться</button>
+      }
+    </div>
+  }
+  else
+  {
+    <div class="alert alert-success mt-4">
+      Спасибо! Скоро мы с вами свяжемся.
+    </div>
+  }
+</EditForm>
+
+@code {
+    private RegistrationModel model = new();
+    private int currentStep = 1;
+    private bool isSubmitting;
+    private bool submitted;
+    private List<string> pickupPoints = new(); // загрузим в OnInitialized
+    private bool CanContinue =>
+        currentStep switch
+        {
+            1 => !string.IsNullOrWhiteSpace(model.FullName),
+            2 => model.BirthDate != null && !string.IsNullOrWhiteSpace(model.Email),
+            3 => !string.IsNullOrWhiteSpace(model.PickupPoint),
+            _ => true
+        };
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Здесь можно на лету загрузить пункты выдачи
+        // Например, загружать из локального json или API
+        // Для примера — статика:
+        pickupPoints = new List<string>
+        {
+            "Москва, ул. Ленина, д.1",
+            "Санкт-Петербург, Невский проспект, д.10",
+            "Новосибирск, ул. Красный проспект, д.100"
+            // ... или загружайте из https://www.atomy.ru/ru/Home/About/EducationCenter
+        };
+    }
+
+    void Next()
+    {
+        if (CanContinue && currentStep < 4) currentStep++;
+    }
+
+    void Prev()
+    {
+        if (currentStep > 1) currentStep--;
+    }
+
+    async Task Submit()
+    {
+        if (!model.AgreeToTerms) return;
+        isSubmitting = true;
+
+        // отправляем в Telegram
+        var botToken = "ВАШ_BOT_TOKEN";
+        var chatId   = "ВАШ_CHAT_ID";
+        var text = $"Новая регистрация:\n" +
+                   $"ФИО: {model.FullName}\n" +
+                   $"Дата рождения: {model.BirthDate:dd.MM.yyyy}\n" +
+                   $"Email: {model.Email}\n" +
+                   $"ПВЗ: {model.PickupPoint}\n" +
+                   $"Телефон: {model.Phone}\n" +
+                   $"Способ связи: {model.PreferredContact}";
+        var uri = $"https://api.telegram.org/bot{botToken}/sendMessage";
+        await Http.PostAsJsonAsync(uri, new { chat_id = chatId, text });
+
+        submitted = true;
+    }
+}

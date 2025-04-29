@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "fj9MLcoHHZ4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\AtomyWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Андрей\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.203\\microsoft.net.sdk.compilers.toolset.9.0.203.nupkg.sha512",
+    "C:\\Users\\Андрей\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.2\\microsoft.visualstudio.azure.containers.tools.targets.1.21.2.nupkg.sha512",
+    "C:\\Users\\Андрей\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.203\\microsoft.net.sdk.compilers.toolset.9.0.203.nupkg.sha512"
+  ],
+  "logs": []
+}

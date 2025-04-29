@@ -1,35 +1,78 @@
+using AtomyWeb.Components;
+using AtomyWeb.Services;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.Extensions.Localization;
-using AtomyWeb;
-using Microsoft.AspNetCore.Components;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddLocalization(options => {
+    options.ResourcesPath = "Resources";
+});
+var supportedCultureCodes = new[] { "ru", "en", "de", "es", "ko", "zh-CN", "ja" };
+var supportedCultures = supportedCultureCodes
+    .Select(code => new CultureInfo(code))
+    .ToList();
 
-// Локализация
-builder.Services.AddLocalization(opts => opts.ResourcesPath = "Resources");
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    options.DefaultRequestCulture = new RequestCulture("ru");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+    // Allow culture selection via query string: "?culture=ru" or "?culture=en"
+    options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider
+    {
+        QueryStringKey = "culture",
+        UIQueryStringKey = "ui-culture"
+    });
+});
+// Add response compression
+builder.Services.AddResponseCompression(options => {
+    options.EnableForHttps = true;
+});
+builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
-// Сжатие ответов
-builder.Services.AddResponseCompression();
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
 var app = builder.Build();
 
-// Использование сжатия ответа
+// Use localization
+app.UseRequestLocalization(app.Services.GetRequiredService<Microsoft.Extensions.Options.IOptions<RequestLocalizationOptions>>().Value);
 app.UseResponseCompression();
-
-// Локализация на основе заголовков
-var supportedCultures = new[] { "ru", "en", "de", "es", "ko", "zh-CN", "ja" }
-    .Select(c => new CultureInfo(c)).ToList();
-app.UseRequestLocalization(new RequestLocalizationOptions
+app.UseRouting();
+app.MapBlazorHub();
+app.UseStaticFiles(new StaticFileOptions
 {
-    DefaultRequestCulture = new RequestCulture("ru"),
-    SupportedCultures = supportedCultures,
-    SupportedUICultures = supportedCultures
+    OnPrepareResponse = ctx => {
+        var path = ctx.File.PhysicalPath;
+        if (path.EndsWith(".css") || path.EndsWith(".js"))
+        {
+            ctx.Context.Response.Headers["Cache-Control"] = "public,max-age=31536000";
+        }
+    }
 });
 
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+
+
+app.UseAntiforgery();
+
+app.MapStaticAssets();
 app.MapRazorComponents<App>()
-   .AddInteractiveServerRenderMode();
+    .AddInteractiveServerRenderMode();
+
 app.Run();

@@ -1,0 +1,159 @@
+﻿:root {
+    --primary: #07297b;
+    --secondary: #00a6dc;
+    --accent: #f9a825;
+    --background: #ffffff;
+    --text-color: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: var(--background);
+    color: var(--text-color);
+}
+
+.dark-mode {
+    --primary: #222222;
+    --background: #121212;
+    --text-color: #e0e0e0;
+}
+
+/* Header and nav */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary) !important;
+}
+
+nav a {
+    color: white;
+}
+
+    nav a:hover {
+        color: var(--accent);
+    }
+
+/* Hero */
+.hero {
+    background: url('Images/i.webp') no-repeat center center/cover;
+    height: 90vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+    .hero h1, .hero p {
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+h2 {
+    color: var(--primary);
+}
+
+/* Buttons and links */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+    .btn-primary:hover {
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+    }
+
+a {
+    color: var(--primary);
+}
+
+    a:hover {
+        color: var(--secondary);
+    }
+
+/* Catalog and reviews */
+.catalog-item h5 {
+    color: var(--primary);
+}
+
+.review {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+    border-top: 4px solid var(--secondary);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 0;
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.catalog-item img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+    .catalog-item img:hover {
+        transform: scale(1.05);
+    }
+.btn-primary:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+#themeToggle {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.spin {
+    animation: spin 0.5s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#lottie {
+    display: none;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+/* Shift carousel arrows outside product range */
+.carousel-control-prev {
+    left: -15%;
+}
+
+.carousel-control-next {
+    right: -15%;
+}
