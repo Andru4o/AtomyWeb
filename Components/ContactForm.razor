@@ -1,0 +1,34 @@
+﻿@namespace AtomyWeb.Components
+@inject IStringLocalizer<SharedResource> L
+
+<EditForm Model="contact" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="row">
+        <div class="col-md-6">
+            <InputText class="form-control mb-3" placeholder="Ваше имя" @bind-Value="contact.Name" />
+            <ValidationMessage For="() => contact.Name" />
+            <InputText type="email" class="form-control mb-3" placeholder="Email" @bind-Value="contact.Email" />
+            <ValidationMessage For="() => contact.Email" />
+        </div>
+        <div class="col-md-6">
+            <InputTextArea class="form-control mb-3" Rows="5" placeholder="Ваше сообщение" @bind-Value="contact.Message" />
+            <ValidationMessage For="() => contact.Message" />
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Отправить</button>
+    </div>
+</EditForm>
+
+@code {
+    private ContactModel contact = new ContactModel();
+    [Parameter] public EventCallback<ContactModel> OnSubmit { get; set; }
+    private async Task HandleSubmit() => await OnSubmit.InvokeAsync(contact);
+    public class ContactModel
+    {
+        [Required(ErrorMessage = "Пожалуйста, укажите имя")] public string Name { get; set; }
+        [Required(ErrorMessage = "Пожалуйста, укажите email")][EmailAddress(ErrorMessage = "Некорректный формат email")] public string Email { get; set; }
+        [Required(ErrorMessage = "Пожалуйста, введите сообщение")] public string Message { get; set; }
+    }
+}

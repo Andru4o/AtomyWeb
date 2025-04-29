@@ -1,0 +1,111 @@
+﻿@using AtomyWeb.Components.Layout
+@using System.Globalization
+<html lang="@CultureInfo.CurrentUICulture.Name">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atomy Site</title>
+    <meta name="description" content="Официальный сайт дистрибьютора Atomy: каталог товаров, отзывы и контакты" />
+    <meta property="og:title" content="Atomy" />
+    <meta property="og:description" content="Официальный сайт дистрибьютора Atomy с каталогом товаров и отзывами" />
+    <meta property="og:image" content="https://atomy-dynasty.ru/assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Organization",
+          "name": "Atomy",
+          "url": "https://yourdomain.com",
+          "logo": "https://yourdomain.com/icons/icon-192.png",
+          "sameAs": [
+            "https://www.facebook.com/yourpage",
+            "https://vk.com/yourpage",
+            "https://www.instagram.com/yourpage",
+            "https://twitter.com/yourpage"
+          ]
+        }
+    </script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <script>
+        window.showBootstrapModal = function(modalId) {
+          var el = document.getElementById(modalId);
+          if (!el) return;
+          var modal = bootstrap.Modal.getOrCreateInstance(el);
+          modal.show();
+        };
+    </script>
+
+    <link rel="stylesheet" href="atomy.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => AOS.init());</script>
+    <script>
+                document.addEventListener('DOMContentLoaded', () => {
+          const lottieContainer = document.getElementById('lottie');
+          // Показать анимацию при скролле до контейнера
+          window.addEventListener('scroll', () => {
+            const rect = lottieContainer.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+              // Контейнер виден
+              if (lottieContainer.style.display === 'none') {
+                lottieContainer.style.display = 'block';
+                lottie.loadAnimation({ /* ваши параметры */ });
+              }
+            } else {
+              // Контейнер вне экрана
+              lottieContainer.style.display = 'none';
+            }
+          });
+        });
+    </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+    </script>
+    <!-- Yandex.Metrika -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){ (m[i].a=m[i].a||[]).push(arguments) };
+            m[i].l=1*new Date();
+            k=e.createElement(t), a=e.getElementsByTagName(t)[0];
+            k.async=1; k.src=r; a.parentNode.insertBefore(k,a);
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(YOUR_YANDEX_ID, "init", {
+             clickmap:true,
+             trackLinks:true,
+             accurateTrackBounce:true,
+             webvisor:true
+        });
+    </script>
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/YOUR_YANDEX_ID" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+    </noscript>
+</head>
+</html>
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p class="text-center text-red-600 mt-10 text-lg">Упс! Страница не найдена.</p>
+        </LayoutView>
+    </NotFound>
+</Router>

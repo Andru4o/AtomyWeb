@@ -1,0 +1,21 @@
+﻿@namespace AtomyWeb.Components
+<div class="col-md-4 catalog-item"
+     style="cursor:pointer;"
+     @onclick="() => SelectProduct(item)"
+     data-bs-toggle="modal"
+     data-bs-target="#productModal">
+    <img src="@ImageUrl" alt="@Name" class="img-fluid" loading="eager" decoding="async" style="aspect-ratio:4/3;object-fit:cover;" />
+    <h5 class="mt-2">@Name</h5>
+    <p>@Price</p>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string ImageUrl { get; set; }
+
+    [Parameter, EditorRequired]
+    public string Name { get; set; }
+
+    [Parameter]
+    public string Price { get; set; }
+}

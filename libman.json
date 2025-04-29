@@ -1,0 +1,14 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "aos@2.3.4",
+      "destination": "wwwroot/lib/aos"
+    },
+    {
+      "library": "lottie-web@5.12.2",
+      "destination": "wwwroot/lib/lottie"
+    }
+  ]
+}

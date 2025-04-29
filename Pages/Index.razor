@@ -1,0 +1,210 @@
+﻿@page "/"
+@using AtomyWeb.Components
+@using AtomyWeb.Services
+@using Microsoft.JSInterop
+@inject IProductService ProductService
+@inject IReviewService ReviewService
+@inject IStringLocalizer<SharedResource> L
+@inject IJSRuntime JS
+@inject ILogger<Index> Logger
+
+<div class="hero animate__animated animate__fadeIn" role="region" aria-label="Welcome section">
+    <div>
+        <h1>Добро пожаловать в Atomy</h1>
+        <p>Официальный дистрибьютор продукции Atomy</p>
+    </div>
+</div>
+
+<section id="vkvideo" class="py-5 bg-dark text-white" role="region" aria-label="VK video section">
+    @* <div class="container">
+        <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Презентация</h2> *@
+    @* <VkPlayer OwnerId="-212429825" VideoId="456239038" Hash="240934a74adda35d" /> *@
+    <div class="container text-center">
+        <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Видео презентация</h2>
+        <VideoPlayer Src="videos/Atomy.mp4"
+        Autoplay="true"
+        Loop="true"
+        Controls="true"
+        PosterUrl="images/video-poster.jpg" />
+    </div>
+    @* </div> *@
+</section>
+
+<section id="catalog" class="py-5" role="region" aria-labelledby="catalog-heading">
+    <div class="container">
+        <h2 id="catalog-heading" class="text-center mb-4 animate__animated animate__fadeInDown">Каталог товаров</h2>
+
+        <div id="lottie" style="width:300px; height:300px; margin: 0 auto;"></div>
+
+        <div id="catalogCarousel" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Product Carousel">
+            <div class="carousel-inner">
+                @if (chunks is not null)
+                {
+                    @for (int slideIndex = 0; slideIndex < chunks.Count; slideIndex++)
+                    {
+                        var chunk = chunks[slideIndex];
+                        <div class="carousel-item @(slideIndex == 0 ? "active" : string.Empty)">
+                            <div class="row">
+                                @foreach (var item in chunk)
+                                {
+                                    <div class="col-md-4 catalog-item"
+                                    style="cursor:pointer;"
+                                    data-title="@item.Name"
+                                    data-image="@item.ImageUrl"
+                                    data-price="@item.Price"
+                                    data-desc="Описание продукта">
+                                        <img src="@item.ImageUrl"
+                                        alt="@item.Name"
+                                        class="img-fluid"
+                                        loading="eager"
+                                        decoding="async"
+                                        style="aspect-ratio:4/3;object-fit:cover;" />
+                                        <h5 class="mt-2">@item.Name</h5>
+                                        <p>@item.Price</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-12 text-center">Загрузка...</div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#catalogCarousel" data-bs-slide="prev" aria-label="Previous slide">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#catalogCarousel" data-bs-slide="next" aria-label="Next slide">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <img id="productModalImage" src="" alt="" class="img-fluid mx-auto d-block mb-3" style="aspect-ratio:4/3;object-fit:cover;width:50%;height:50%;" />
+                <p id="productModalPrice"></p>
+                <p id="productModalDesc"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="reviews" class="py-5 bg-light" role="region" aria-labelledby="reviews-heading">
+    <div class="container">
+        <h2 id="reviews-heading" class="text-center mb-4 animate__animated animate__fadeInDown">Отзывы клиентов</h2>
+        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Reviews Carousel">
+            <div class="carousel-inner">
+                @if (reviews != null)
+                {
+                    @foreach (var revChunk in reviewsChunks)
+                    {
+                        <div class="carousel-item @(revChunk == reviewsChunks.First() ? "active" : null)">
+                            <div class="row justify-content-center">
+                                @foreach (var rev in revChunk)
+                                {
+                                    <div class="col-4">
+                                        <img src="@rev" alt="Отзыв" class="img-fluid rounded shadow" />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev" aria-label="Previous slide">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next" aria-label="Next slide">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5" role="region" aria-labelledby="contact-heading">
+    <div class="container">
+        <h2 id="contact-heading" class="text-center mb-4 animate__animated animate__fadeInDown">Связаться с нами</h2>
+        <ContactForm OnSubmit="HandleSubmit" />
+    </div>
+</section>
+
+<script>
+    document.addEventListener('click', function (e) {
+    var el = e.target.closest('.catalog-item');
+    if (!el) return;
+    var title = el.getAttribute('data-title');
+    var image = el.getAttribute('data-image');
+    var price = el.getAttribute('data-price');
+    var desc = el.getAttribute('data-desc');
+
+    var modalTitle = document.getElementById('productModalLabel');
+    var modalImage = document.getElementById('productModalImage');
+    var modalPrice = document.getElementById('productModalPrice');
+    var modalDesc = document.getElementById('productModalDesc');
+
+    modalTitle.textContent = title;
+    modalImage.src = image;
+    modalImage.alt = title;
+    modalPrice.textContent = price;
+    modalDesc.textContent = desc;
+
+    var modalEl = document.getElementById('productModal');
+    var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modal.show();
+    });
+</script>
+
+
+@code {
+    private IEnumerable<ProductModel> products;
+    private IEnumerable<string> reviews;
+    private List<List<ProductModel>> chunks;
+    private List<List<string>> reviewsChunks;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetProductsAsync();
+
+        chunks = products
+            .Select((product, index) => new { product, index })
+            .GroupBy(x => x.index / 3)
+            .Select(g => g.Select(x => x.product).ToList())
+            .ToList();
+
+        reviews = await ReviewService.GetReviewsAsync();
+        reviewsChunks = reviews.Select((r, i) => new { r, idx = i })
+            .GroupBy(x => x.idx / 3)
+            .Select(g => g.Select(x => x.r).ToList())
+            .ToList();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && products != null && products.Count() > 0)
+        {
+            var imageUrls = products.Select(p => p.ImageUrl).ToArray();
+            await JS.InvokeVoidAsync("preloadImages", (object)imageUrls);
+        }
+    }
+
+    private void HandleSubmit(ContactForm.ContactModel contact)
+    {
+        Console.WriteLine($"{contact.Name} ({contact.Email}): {contact.Message}");
+    }
+}

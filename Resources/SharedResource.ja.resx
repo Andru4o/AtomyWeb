@@ -1,0 +1,49 @@
+﻿<root>
+	<data name="WelcomeTitle">
+		<value>Atomyへようこそ</value>
+	</data>
+	<data name="WelcomeDescription">
+		<value>公式のAtomyディストリビューター</value>
+	</data>
+	<data name="CatalogHeading">
+		<value>商品カタログ</value>
+	</data>
+	<data name="ReviewsHeading">
+		<value>お客様のレビュー</value>
+	</data>
+	<data name="ContactHeading">
+		<value>お問い合わせ</value>
+	</data>
+
+	<data name="NavCatalog">
+		<value>カタログ</value>
+	</data>
+	<data name="NavReviews">
+		<value>レビュー</value>
+	</data>
+	<data name="NavContacts">
+		<value>連絡先</value>
+	</data>
+	<data name="ThemeSwitch">
+		<value>ダークテーマ</value>
+	</data>
+	<data name="FooterText">
+		<value>© 2025 Atomy。全著作権所有。</value>
+	</data>
+
+	<data name="SubmitButton">
+		<value>送信</value>
+	</data>
+	<data name="NamePlaceholder">
+		<value>お名前</value>
+	</data>
+	<data name="EmailPlaceholder">
+		<value>メールアドレス</value>
+	</data>
+	<data name="MessagePlaceholder">
+		<value>メッセージ</value>
+	</data>
+	<data name="ScrollTopAria">
+		<value>トップへスクロール</value>
+	</data>
+</root>

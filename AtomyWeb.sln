@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomyWeb", "AtomyWeb.csproj", "{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomyWeb.UnitTests", "..\AtomyWeb.UnitTests\AtomyWeb.UnitTests.csproj", "{11CDC405-7214-456E-9CD3-D8A96FF46DBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E8D5D2-0969-4761-A7FE-77F26F7B1675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CDC405-7214-456E-9CD3-D8A96FF46DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CDC405-7214-456E-9CD3-D8A96FF46DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CDC405-7214-456E-9CD3-D8A96FF46DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CDC405-7214-456E-9CD3-D8A96FF46DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

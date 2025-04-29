@@ -1,0 +1,83 @@
+﻿@inherits LayoutComponentBase
+@inject IStringLocalizer<SharedResource> L
+
+@using AtomyWeb.Resources
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.Extensions.Localization
+@using System.Globalization
+
+@inject IStringLocalizer<SharedResource> L
+
+<header class="site-header navbar navbar-expand-lg navbar-dark sticky-top" role="banner">
+    <div class="container">
+        <a class="navbar-brand" href="/">Atomy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="navbarNav" role="navigation" aria-label="Primary">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><NavLink class="nav-link" href="#catalog">Каталог</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link" href="#reviews">Отзывы</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link" href="#contact">Контакты</NavLink></li>
+                @* <li class="nav-item dropdown ms-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">@CultureInfo.CurrentCulture.TwoLetterISOLanguageName.ToUpper()</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                        <li><a class="dropdown-item" href="?culture=ru">Русский</a></li>
+                        <li><a class="dropdown-item" href="?culture=en">English</a></li>
+                    </ul>
+                </li> *@
+                <li class="nav-item form-check form-switch text-white ms-3">
+                    <input class="form-check-input" type="checkbox" id="themeToggle" onclick="toggleDarkMode()" aria-label="Тёмная тема" />
+                    <label class="form-check-label" for="themeToggle">Тёмная тема</label>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main-body" role="main">
+    @Body
+</main>
+
+<footer class="site-footer text-center py-4" role="contentinfo">
+    © 2025 Atomy. Все права защищены.
+
+    <div class="social-share">
+        <a href="https://vk.com/share.php?url=https://yourdomain.com" target="_blank">VK</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com/intent/tweet?url=https://yourdomain.com&text=Atomy" target="_blank">Twitter</a>
+    </div>
+</footer>
+
+<button id="scrollTopBtn" onclick="scrollToTop()" class="scroll-to-top" aria-label="Наверх">↑</button>
+
+<script>
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn'); btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark-mode');
+      const isDark = document.documentElement.classList.contains('dark-mode');
+      localStorage.setItem('dark-mode', isDark);
+      document.getElementById('themeToggle').checked = isDark;
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('dark-mode') === 'true';
+      if (saved) { document.documentElement.classList.add('dark-mode'); document.getElementById('themeToggle').checked = true; }
+    });
+    function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        const btn = document.getElementById('scrollTopBtn');
+    btn.addEventListener('click', () => {
+      btn.classList.add('spin');
+      setTimeout(() => btn.classList.remove('spin'), 500);
+    });
+
+    window.preloadImages = function(images) {
+      images.forEach(function(src) {
+        var img = new Image();
+        img.src = src;
+      });
+    };
+</script>

@@ -1,0 +1,15 @@
+<Project>
+	<PropertyGroup>
+		<!-- Общая версия TargetFramework -->
+		<TargetFramework>net9.0</TargetFramework>
+		<!-- Включить строгий анализ кода -->
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Общие пакеты -->
+		<PackageReference Update="Microsoft.AspNetCore.Components.Web" Version="9.0.0" />
+		<PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+		<!-- Добавьте свои -->
+	</ItemGroup>
+</Project>

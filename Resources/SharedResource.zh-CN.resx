@@ -1,0 +1,49 @@
+﻿<root>
+	<data name="WelcomeTitle">
+		<value>欢迎来到 Atomy</value>
+	</data>
+	<data name="WelcomeDescription">
+		<value>您的官方 Atomy 经销商</value>
+	</data>
+	<data name="CatalogHeading">
+		<value>产品目录</value>
+	</data>
+	<data name="ReviewsHeading">
+		<value>客户评价</value>
+	</data>
+	<data name="ContactHeading">
+		<value>联系我们</value>
+	</data>
+
+	<data name="NavCatalog">
+		<value>目录</value>
+	</data>
+	<data name="NavReviews">
+		<value>评价</value>
+	</data>
+	<data name="NavContacts">
+		<value>联系</value>
+	</data>
+	<data name="ThemeSwitch">
+		<value>深色主题</value>
+	</data>
+	<data name="FooterText">
+		<value>© 2025 Atomy。保留所有权利。</value>
+	</data>
+
+	<data name="SubmitButton">
+		<value>提交</value>
+	</data>
+	<data name="NamePlaceholder">
+		<value>您的姓名</value>
+	</data>
+	<data name="EmailPlaceholder">
+		<value>电子邮件</value>
+	</data>
+	<data name="MessagePlaceholder">
+		<value>您的留言</value>
+	</data>
+	<data name="ScrollTopAria">
+		<value>向上滚动</value>
+	</data>
+</root>

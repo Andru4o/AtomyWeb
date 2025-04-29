@@ -1,0 +1,49 @@
+﻿<root>
+	<data name="WelcomeTitle">
+		<value>Bienvenido a Atomy</value>
+	</data>
+	<data name="WelcomeDescription">
+		<value>Su distribuidor oficial de Atomy</value>
+	</data>
+	<data name="CatalogHeading">
+		<value>Catálogo de Productos</value>
+	</data>
+	<data name="ReviewsHeading">
+		<value>Reseñas de Clientes</value>
+	</data>
+	<data name="ContactHeading">
+		<value>Contáctanos</value>
+	</data>
+
+	<data name="NavCatalog">
+		<value>Catálogo</value>
+	</data>
+	<data name="NavReviews">
+		<value>Reseñas</value>
+	</data>
+	<data name="NavContacts">
+		<value>Contactos</value>
+	</data>
+	<data name="ThemeSwitch">
+		<value>Tema Oscuro</value>
+	</data>
+	<data name="FooterText">
+		<value>© 2025 Atomy. Todos los derechos reservados.</value>
+	</data>
+
+	<data name="SubmitButton">
+		<value>Enviar</value>
+	</data>
+	<data name="NamePlaceholder">
+		<value>Su Nombre</value>
+	</data>
+	<data name="EmailPlaceholder">
+		<value>Correo electrónico</value>
+	</data>
+	<data name="MessagePlaceholder">
+		<value>Su Mensaje</value>
+	</data>
+	<data name="ScrollTopAria">
+		<value>Desplazar hacia arriba</value>
+	</data>
+</root>

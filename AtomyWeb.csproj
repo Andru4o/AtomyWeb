@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<!-- TargetFramework определяется в Directory.Build.props -->
+		<TargetFramework>$(TargetFramework)</TargetFramework>
+		<!-- Включение nullable reference types и неявных директив using -->
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Основные зависимости. Версии задаются в Directory.Build.props -->
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+		<PackageReference Include="Quick.AspNetCore.Components.Web.Extensions" Version="6.0.2" />
+		<PackageReference Include="Serilog.AspNetCore" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+		<PackageReference Include="FluentValidation.AspNetCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" PrivateAssets="all" />
+		<PackageReference Include="Swashbuckle.AspNetCore" />
+		<!-- Добавьте дополнительные зависимости по необходимости -->
+	</ItemGroup>
+</Project>

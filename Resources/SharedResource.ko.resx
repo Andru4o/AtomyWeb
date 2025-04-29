@@ -1,0 +1,49 @@
+﻿<root>
+	<data name="WelcomeTitle">
+		<value>Atomy에 오신 것을 환영합니다</value>
+	</data>
+	<data name="WelcomeDescription">
+		<value>공식 Atomy 유통업체</value>
+	</data>
+	<data name="CatalogHeading">
+		<value>제품 카탈로그</value>
+	</data>
+	<data name="ReviewsHeading">
+		<value>고객 리뷰</value>
+	</data>
+	<data name="ContactHeading">
+		<value>문의하기</value>
+	</data>
+
+	<data name="NavCatalog">
+		<value>카탈로그</value>
+	</data>
+	<data name="NavReviews">
+		<value>리뷰</value>
+	</data>
+	<data name="NavContacts">
+		<value>연락처</value>
+	</data>
+	<data name="ThemeSwitch">
+		<value>다크 테마</value>
+	</data>
+	<data name="FooterText">
+		<value>© 2025 Atomy. 판권 소유.</value>
+	</data>
+
+	<data name="SubmitButton">
+		<value>제출</value>
+	</data>
+	<data name="NamePlaceholder">
+		<value>이름</value>
+	</data>
+	<data name="EmailPlaceholder">
+		<value>이메일</value>
+	</data>
+	<data name="MessagePlaceholder">
+		<value>메시지</value>
+	</data>
+	<data name="ScrollTopAria">
+		<value>위로 스크롤</value>
+	</data>
+</root>

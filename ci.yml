@@ -1,0 +1,49 @@
+﻿name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore NuGet packages
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Run Unit Tests with Coverage
+        run: |
+          dotnet test **/AtomyWeb.UnitTests.csproj --no-build --configuration Release \
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=cobertura \
+            /p:CoverletOutput=TestResults/coverage/
+
+      - name: Publish coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: AtomyWeb.UnitTests/TestResults/coverage
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Playwright and dependencies
+        run: |
+          npm ci --prefix e2e
+          npx playwright install-deps
+
+      - name: Run E2E Tests
+        run: npx playwright test --config=e2e/playwright.config.js
+        working-directory: e2e

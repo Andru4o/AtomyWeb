@@ -1,0 +1,25 @@
+﻿# .NET
+bin/
+obj/
+*.user
+*.suo
+*.log
+.vs/
+# Rider/IDE
+.idea/
+*.iml
+
+# Node
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Docker
+docker-compose.override.yml
+
+# OS-specific
+.DS_Store
+Thumbs.db

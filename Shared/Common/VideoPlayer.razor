@@ -1,0 +1,46 @@
+﻿@namespace AtomyWeb.Components
+
+<video @attributes="AdditionalAttributes"
+       controls="@Controls"
+       autoplay="@Autoplay"
+       loop="@Loop"
+       muted="@Muted"
+       poster="@PosterUrl"
+       width="100%">
+    <source src="@Src" type="@Type" />
+    Ваш браузер не поддерживает видео.
+</video>
+
+@code {
+    /// <summary>Путь к видео (относительный к wwwroot).</summary>
+    [Parameter, EditorRequired]
+    public string Src { get; set; }
+
+    /// <summary>Тип видео (MIME).</summary>
+    [Parameter]
+    public string Type { get; set; } = "video/mp4";
+
+    /// <summary>Показывать элементы управления.</summary>
+    [Parameter]
+    public bool Controls { get; set; } = true;
+
+    /// <summary>Автовоспроизведение.</summary>
+    [Parameter]
+    public bool Autoplay { get; set; } = false;
+
+    /// <summary>Циклическое воспроизведение.</summary>
+    [Parameter]
+    public bool Loop { get; set; } = false;
+
+    /// <summary>Без звука.</summary>
+    [Parameter]
+    public bool Muted { get; set; } = false;
+
+    /// <summary>Постер (картинка до воспроизведения).</summary>
+    [Parameter]
+    public string PosterUrl { get; set; }
+
+    /// <summary>Дополнительные атрибуты для тэга video.</summary>
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; }
+}

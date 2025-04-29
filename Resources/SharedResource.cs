@@ -1,0 +1,1 @@
+﻿namespace AtomyWeb.Resources { public class SharedResource { } }

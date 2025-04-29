@@ -1,0 +1,22 @@
+[
+  {
+    "outputFileName": "wwwroot/css/atomy.min.css",
+    "inputFiles": [
+      "wwwroot/lib/aos/aos.css",
+      "wwwroot/css/atomy.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "commentMode": "all"
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/atomy.bundle.js",
+    "inputFiles": [
+      "wwwroot/lib/aos/aos.js",
+      "wwwroot/lib/lottie/lottie.min.js",
+      "wwwroot/js/bootstrap.bundle.min.js"
+    ],
+    "minify": { "enabled": true }
+  }
+]
