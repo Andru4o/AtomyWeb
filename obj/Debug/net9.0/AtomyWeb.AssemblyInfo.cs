@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AtomyWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bba1137b3366f1241260b4d55f8ea59e1e00394c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4064bd5db3528896912f1ae769d327d216722353")]
 [assembly: System.Reflection.AssemblyProductAttribute("AtomyWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AtomyWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

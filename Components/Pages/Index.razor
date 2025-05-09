@@ -35,56 +35,65 @@
         <h2 id="catalog-heading" class="text-center mb-4 animate__animated animate__fadeInDown">Каталог товаров</h2>
 
         <div id="lottie" style="width:300px; height:300px; margin: 0 auto;"></div>
-
-        <div id="catalogCarousel" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Product Carousel">
-            <div class="carousel-inner">
-                @if (chunks is not null)
-                {
-                    @for (int slideIndex = 0; slideIndex < chunks.Count; slideIndex++)
+        @if (chunks != null)
+        {
+            int i = 0;
+            foreach (var ch in chunks)
+            {
+                i++;
+                var carouselId = $"catalogCarousel{i}";
+                <h2 id="catalog-heading" class="text-center mb-4 animate__animated animate__fadeInDown">@ch.Key</h2>
+                <div id="@carouselId" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Product Carousel">
+                <div class="carousel-inner">
+                    @if (ch.Value is not null)
                     {
-                        var chunk = chunks[slideIndex];
-                        <div class="carousel-item @(slideIndex == 0 ? "active" : string.Empty)">
+                        @for (int slideIndex = 0; slideIndex < ch.Value.Count; slideIndex++)
+                        {
+                            var chunk = ch.Value[slideIndex];
+                            <div class="carousel-item @(slideIndex == 0 ? "active" : string.Empty)">
+                                <div class="row">
+                                    @foreach (var item in chunk)
+                                    {
+                                        <div class="col-md-4 catalog-item"
+                                             style="cursor:pointer;"
+                                             data-title="@item.Name"
+                                             data-image="@item.ImageUrl"
+                                             data-price="@item.Price"
+                                             data-desc="@item.Details">
+                                            <img src="@item.ImageUrl"
+                                                 alt="@item.Name"
+                                                 class="img-fluid"
+                                                 loading="eager"
+                                                 decoding="async"
+                                                 style="aspect-ratio:4/3;object-fit:cover;" />
+                                            <h5 class="mt-2">@item.Name</h5>
+                                            <p>@item.Price</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="carousel-item active">
                             <div class="row">
-                                @foreach (var item in chunk)
-                                {
-                                    <div class="col-md-4 catalog-item"
-                                    style="cursor:pointer;"
-                                    data-title="@item.Name"
-                                    data-image="@item.ImageUrl"
-                                    data-price="@item.Price"
-                                    data-desc="Описание продукта">
-                                        <img src="@item.ImageUrl"
-                                        alt="@item.Name"
-                                        class="img-fluid"
-                                        loading="eager"
-                                        decoding="async"
-                                        style="aspect-ratio:4/3;object-fit:cover;" />
-                                        <h5 class="mt-2">@item.Name</h5>
-                                        <p>@item.Price</p>
-                                    </div>
-                                }
+                                <div class="col-12 text-center">Загрузка...</div>
                             </div>
                         </div>
                     }
-                }
-                else
-                {
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-12 text-center">Загрузка...</div>
-                        </div>
-                    </div>
-                }
+                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#@carouselId" data-bs-slide="prev" aria-label="Previous slide">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#@carouselId" data-bs-slide="next" aria-label="Next slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#catalogCarousel" data-bs-slide="prev" aria-label="Previous slide">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Предыдущий</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#catalogCarousel" data-bs-slide="next" aria-label="Next slide">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Следующий</span>
-            </button>
-        </div>
+        }
+        }
     </div>
 </section>
 
@@ -100,11 +109,34 @@
             <div class="modal-body">
                 <img id="productModalImage" src="" alt="" class="img-fluid mx-auto d-block mb-3" style="aspect-ratio:4/3;object-fit:cover;width:50%;height:50%;" />
                 <p id="productModalPrice"></p>
+                <br />
+                <p>Описание продукта</p>
                 <p id="productModalDesc"></p>
             </div>
         </div>
     </div>
 </div>
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Создать кабинет</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <Register />
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="register" class="py-5 bg-info" role="region" aria-labelledby="register-heading">
+    <div class="container" style="align-content: center; align-items: center;">
+        <h2 id="register-heading" class="text-center mb-4 animate__animated animate__fadeInDown">Создать кабинет</h2>
+        <Register />
+    </div>
+</section>
+
 
 <section id="reviews" class="py-5 bg-light" role="region" aria-labelledby="reviews-heading">
     <div class="container">
@@ -163,7 +195,7 @@
     modalImage.src = image;
     modalImage.alt = title;
     modalPrice.textContent = price;
-    modalDesc.textContent = desc;
+    modalDesc.innerHTML = desc;
 
     var modalEl = document.getElementById('productModal');
     var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
@@ -175,18 +207,21 @@
 @code {
     private IEnumerable<ProductModel> products;
     private IEnumerable<string> reviews;
-    private List<List<ProductModel>> chunks;
+    private Dictionary<string, List<List<ProductModel>>> chunks;
     private List<List<string>> reviewsChunks;
 
     protected override async Task OnInitializedAsync()
     {
         products = await ProductService.GetProductsAsync();
 
-        chunks = products
-            .Select((product, index) => new { product, index })
-            .GroupBy(x => x.index / 3)
-            .Select(g => g.Select(x => x.product).ToList())
-            .ToList();
+        chunks = products.GroupBy(p => p.Category).ToDictionary(
+                    g => g.Key,
+                    g => g
+                          .ToList()              // сначала приводим группу к List<Product>
+                          .Chunk(3)              // разбиваем на Product[] размером до 3
+                          .Select(chunk => chunk.ToList()) // превращаем каждый массив в List<Product>
+                          .ToList()              // получаем List<List<Product>>
+                );
 
         reviews = await ReviewService.GetReviewsAsync();
         reviewsChunks = reviews.Select((r, i) => new { r, idx = i })

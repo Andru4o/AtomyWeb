@@ -2,11 +2,23 @@
   "Files": [
     {
       "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\AtomyWeb.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AtomyWeb.m8iaz286wu.bundle.scp.css"
+      "PackagePath": "staticwebassets\\AtomyWeb.tqcinu97mr.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\Images\\atomy-seeklogo.png",
+      "PackagePath": "staticwebassets\\Images\\atomy-seeklogo.png"
+    },
+    {
+      "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\Images\\atomy-seeklogo.svg",
+      "PackagePath": "staticwebassets\\Images\\atomy-seeklogo.svg"
     },
     {
       "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\Images\\i.webp",
       "PackagePath": "staticwebassets\\Images\\i.webp"
+    },
+    {
+      "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\Images\\telegram-seeklogo.png",
+      "PackagePath": "staticwebassets\\Images\\telegram-seeklogo.png"
     },
     {
       "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\android-chrome-192x192.png",
@@ -33,8 +45,16 @@
       "PackagePath": "staticwebassets\\atomy.css"
     },
     {
+      "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\data\\cleaned_products_with_html.json",
+      "PackagePath": "staticwebassets\\data\\cleaned_products_with_html.json"
+    },
+    {
       "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\data\\products.json",
       "PackagePath": "staticwebassets\\data\\products.json"
+    },
+    {
+      "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\data\\products_updated.json",
+      "PackagePath": "staticwebassets\\data\\products_updated.json"
     },
     {
       "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\data\\reviews.json",
@@ -55,6 +75,14 @@
     {
       "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\js\\imasked.js",
+      "PackagePath": "staticwebassets\\js\\imasked.js"
+    },
+    {
+      "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\js\\imasked.min.js",
+      "PackagePath": "staticwebassets\\js\\imasked.min.js"
     },
     {
       "Id": "C:\\Users\\Андрей\\source\\repos\\AtomyWeb\\wwwroot\\lib\\animate\\animate.min.css",

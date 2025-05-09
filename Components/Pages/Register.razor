@@ -1,161 +1,208 @@
 ﻿@page "/register"
 @using AtomyWeb.Services
+@using Blazorise
+@using Microsoft.JSInterop;
 @inject HttpClient Http
 @inject NavigationManager Nav
-@using System.Net.Http.Json
+@inject IJSRuntime JS
 
-<EditForm Model="model">
-  <h2 class="mb-4">Регистрация (бесплатно и ни к чему не обязывает!)</h2>
+<h2 class="mb-4" style="display: flex;
+    justify-content: center;
+    align-items: baseline;">
+    Регистрация (бесплатно и ни к чему не обязывает!)
+</h2>
+<div class="page-wrapper">
+    <form id="regForm" name="regForm" style="width: 50%; padding: 10px; align-content: center; align-items: baseline; position: relative;">
+            <div class="autocomplete-wrapper" style="position: relative; width: 100%;">
+        <label>ФИО</label>
+            <input type="text" id="fullName" name="FullName" class="form-control" autocomplete="name" required />
+                <ul id="fio-full" name="fio-full" class="list"></ul>
+            <label>Адрес доставки</label>
+            <input id="address" name="address" type="text" class="form-control" autocomplete="address" required />
+                <ul id="address-full" name="address-full" class="list"></ul>
+            </div>
 
-  <div class="mb-4">
-    <div class="progress">
-      <div class="progress-bar" 
-           style="width:@(currentStep*25)%;">
-        Шаг @currentStep из 4
-      </div>
-    </div>
-  </div>
+        <label>Дата рождения</label>
+        <div class="aks-date-row">
+            <input type="date" id="birthDate" name="BirthDate" class="form-control aks-input" autocomplete="date" required />
+        <div class="aks-date-calender">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <path d="M16 2v4" />
+                <path d="M8 2v4" />
+                <path d="M3 10h18" />
+            </svg>
+        </div>
+        </div>
+        <label>Email</label>
+            <input type="email" id="email" name="Email" class="form-control" autocomplete="email" placeholder="E-mail" required />
 
-  @if (!submitted)
-  {
-    @switch (currentStep)
-    {
-      case 1:
-        <div>
-          <label>Ваше ФИО</label>
-          <InputText class="form-control" @bind-Value="model.FullName" />
+        <label>Телефон</label>
+            <input type="tel" id="phone" autocomplete="tel" placeholder="Номер телефона" name="Phone" class="form-control" required" />
+        <div class="invalid-feedback">Введите номер в формате +7(999) 999-99-99</div>
+        <div class="form-check mt-2">
+            <input type="checkbox" id="agree" name="AgreeToTerms" class="form-check-input" required />
+            <label class="form-check-label" for="agree">Я согласен с <a href="/Privacy" target="_blank" rel="noopener noreferrer">Политикой обработки данных</a> и принимаю условия <a href="/Privacy" target="_blank" rel="noopener noreferrer">Пользовательского соглашения</a></label>
+            <div class="invalid-feedback">Необходимо согласие</div>
         </div>
-        break;
-      case 2:
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label>Дата рождения</label>
-            <InputDate class="form-control" @bind-Value="model.BirthDate" />
-          </div>
-          <div class="col-md-6 mb-3">
-            <label>Email</label>
-            <InputText type="email" class="form-control" @bind-Value="model.Email" />
-          </div>
-        </div>
-        break;
-      case 3:
-        <div>
-          <label>Выберите пункт выдачи Atomy</label>
-          <InputSelect class="form-select" @bind-Value="model.PickupPoint">
-            <option value="">— выберите —</option>
-            @foreach(var p in pickupPoints)
-            {
-              <option value="@p">@p</option>
-            }
-          </InputSelect>
-        </div>
-        break;
-      case 4:
-        <div class="mb-3">
-          <label>Телефон</label>
-          <InputText type="tel" class="form-control" @bind-Value="model.Phone" />
-        </div>
-        @* <div class="mb-3">
-          <label>Удобный способ связи</label>
-          <div>
-            <InputRadio name="pref" @bind-Value="model.PreferredContact" Value="WhatsApp" /> WhatsApp
-            <InputRadio name="pref" @bind-Value="model.PreferredContact" Value="Telegram" class="ms-3" /> Telegram
-            <InputRadio name="pref" @bind-Value="model.PreferredContact" Value="SMS" class="ms-3" /> СМС
-          </div>
-        </div> *@
-        <div class="form-check mb-3">
-          <InputCheckbox class="form-check-input" @bind-Value="model.AgreeToTerms" />
-          <label class="form-check-label">
-            Я согласен с <a href="terms" target="_blank">пользовательским соглашением</a> и <a href="privacy" target="_blank">политикой обработки данных</a>
-          </label>
-        </div>
-        break;
-    }
 
     <div class="d-flex justify-content-between mt-4">
-      <button class="btn btn-outline-secondary"
-              disabled="@(currentStep == 1)"
-              @onclick="Prev">Назад</button>
+            <button type="button" id="nextBtn" class="btn btn-primary" onclick="nextStep()">Зарегистрироваться</button>
+    </div>
+</form>
+</div>
 
-      @if (currentStep < 4)
-      {
-        <button class="btn btn-primary"
-                disabled="@(!CanContinue)"
-                @onclick="Next">Далее</button>
+<script>
+    //reference
+    let addressInput = document.getElementById("address");
+    let fioInput = document.getElementById("fullName");
+    let hints = [];
+        addressInput.addEventListener("keyup", (e) => {
+      //loop through above array
+      //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+      removeElements();
+
+      if (addressInput.value != "" && addressInput.value.length > 2) {
+          getAddress();
       }
-      else
-      {
-        <button class="btn btn-success"
-                disabled="@(!model.AgreeToTerms || isSubmitting)"
-                @onclick="Submit">Зарегистрироваться</button>
+    });
+    fioInput.addEventListener("keyup", (e) => {
+      //loop through above array
+      //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+      removeElements();
+
+      if (fioInput.value != "" && fioInput.value.length > 2) {
+          getFio();
       }
-    </div>
-  }
-  else
-  {
-    <div class="alert alert-success mt-4">
-      Спасибо! Скоро мы с вами свяжемся.
-    </div>
-  }
-</EditForm>
+    });
+    function setAddress(value) {
+      addressInput.value = value;
+      removeElements();
+    }
+    function setFIO(value) {
+      fioInput.value = value;
+      removeElements();
+    }
+    function removeElements() {
+      //clear all the item
+      let items = document.querySelectorAll(".list-items");
+      items.forEach((item) => {
+        item.remove();
+      });
+    }
+
+    function getAddress() {
+        var dto = {
+          query: document.getElementById('address').value
+        };
+
+    fetch('/api/checkAddress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dto)
+    })
+    .then(res => {
+      if (!res.ok) throw new Error(res.statusText);
+      return res.json();
+    })
+    .then(data => {hints = data;
+    for (let hint in hints) {
+                let listItem = document.createElement("li");
+          //One common class name
+          let h = hints[hint];
+          listItem.classList.add("list-items");
+          listItem.style.cursor = "pointer";
+          listItem.setAttribute("onclick", "setAddress('" + h + "')");
+          //Display matched part in bold
+          let word = "<b>" + h.substr(0, fioInput.value.length) + "</b>";
+          word += h.substr(fioInput.value.length);
+          //display the value in array
+          listItem.innerHTML = word;
+          document.querySelector("ul[name='address-full']").appendChild(listItem);
+            }})
+    }
+    function getFio() {
+        var dto = {
+          query: document.getElementById('fullName').value
+        };
+
+    fetch('/api/checkFIO', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dto)
+    })
+    .then(res => {
+      if (!res.ok) throw new Error(res.statusText);
+      return res.json();
+    })
+    .then(data => {hints = data;
+    for (let hint in hints) {
+                let listItem = document.createElement("li");
+          //One common class name
+          let h = hints[hint];
+          listItem.classList.add("list-items");
+          listItem.style.cursor = "pointer";
+          listItem.setAttribute("onclick", "setFIO('" + h + "')");
+          //Display matched part in bold
+          let word = "<b>" + h.substr(0, fioInput.value.length) + "</b>";
+          word += h.substr(fioInput.value.length);
+          //display the value in array
+          listItem.innerHTML = word;
+          document.querySelector("ul[name='fio-full']").appendChild(listItem);
+            }})
+    }
+
+    function nextStep() {
+        var form = document.querySelector("form[id='regForm']");
+      var inputs = form.querySelectorAll('input, select');
+      var valid = true;
+
+      inputs.forEach(function(i) {
+        if (!i.checkValidity()) {
+          i.classList.add('is-invalid');
+          valid = false;
+        } else {
+          i.classList.remove('is-invalid');
+        }
+      });
+
+      if (!valid) return;
+
+      
+        var data = {
+          FullName: document.getElementById('fullName').value,
+          BirthDate: document.getElementById('birthDate').value,
+          Email: document.getElementById('email').value,
+          Address: document.getElementById('address').value,
+          Phone: document.getElementById('phone').value
+        };
+
+    fetch('/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(res => {
+      if (!res.ok) throw new Error(res.statusText);
+      return res.json();
+    })
+    .then(_ => {
+      alert('Спасибо! Ваши данные отправлены.');
+      form.reset();
+      form.classList.remove('was-validated');
+    })
+    .catch(err => {
+      console.error('Ошибка отправки:', err);
+      alert('Произошла ошибка при отправке формы.');
+    });
+    }
+</script>
 
 @code {
-    private RegistrationModel model = new();
-    private int currentStep = 1;
-    private bool isSubmitting;
-    private bool submitted;
-    private List<string> pickupPoints = new(); // загрузим в OnInitialized
-    private bool CanContinue =>
-        currentStep switch
-        {
-            1 => !string.IsNullOrWhiteSpace(model.FullName),
-            2 => model.BirthDate != null && !string.IsNullOrWhiteSpace(model.Email),
-            3 => !string.IsNullOrWhiteSpace(model.PickupPoint),
-            _ => true
-        };
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        // Здесь можно на лету загрузить пункты выдачи
-        // Например, загружать из локального json или API
-        // Для примера — статика:
-        pickupPoints = new List<string>
-        {
-            "Москва, ул. Ленина, д.1",
-            "Санкт-Петербург, Невский проспект, д.10",
-            "Новосибирск, ул. Красный проспект, д.100"
-            // ... или загружайте из https://www.atomy.ru/ru/Home/About/EducationCenter
-        };
-    }
-
-    void Next()
-    {
-        if (CanContinue && currentStep < 4) currentStep++;
-    }
-
-    void Prev()
-    {
-        if (currentStep > 1) currentStep--;
-    }
-
-    async Task Submit()
-    {
-        if (!model.AgreeToTerms) return;
-        isSubmitting = true;
-
-        // отправляем в Telegram
-        var botToken = "ВАШ_BOT_TOKEN";
-        var chatId   = "ВАШ_CHAT_ID";
-        var text = $"Новая регистрация:\n" +
-                   $"ФИО: {model.FullName}\n" +
-                   $"Дата рождения: {model.BirthDate:dd.MM.yyyy}\n" +
-                   $"Email: {model.Email}\n" +
-                   $"ПВЗ: {model.PickupPoint}\n" +
-                   $"Телефон: {model.Phone}\n" +
-                   $"Способ связи: {model.PreferredContact}";
-        var uri = $"https://api.telegram.org/bot{botToken}/sendMessage";
-        await Http.PostAsJsonAsync(uri, new { chat_id = chatId, text });
-
-        submitted = true;
+        if (firstRender)
+            await JS.InvokeVoidAsync("initPhoneMask", "#phone");
     }
 }

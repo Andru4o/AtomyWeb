@@ -7,6 +7,8 @@
     <img src="@ImageUrl" alt="@Name" class="img-fluid" loading="eager" decoding="async" style="aspect-ratio:4/3;object-fit:cover;" />
     <h5 class="mt-2">@Name</h5>
     <p>@Price</p>
+    <p>Описание продукта</p>
+    @Details
 </div>
 
 @code {
@@ -18,4 +20,7 @@
 
     [Parameter]
     public string Price { get; set; }
+
+    [Parameter]
+    public string Details { get; set; }
 }

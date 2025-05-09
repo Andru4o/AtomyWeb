@@ -2,8 +2,15 @@ using AtomyWeb.Components;
 using AtomyWeb.Services;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Builder;
 using System.Globalization;
 using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Telegram.Bot.Types;
+using Telegram.Bot;
+using Dadata;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLocalization(options => {
@@ -41,12 +48,13 @@ builder.Services.AddRazorComponents()
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
 var app = builder.Build();
-
+app.MapFallbackToFile("/Components/App");
 // Use localization
 app.UseRequestLocalization(app.Services.GetRequiredService<Microsoft.Extensions.Options.IOptions<RequestLocalizationOptions>>().Value);
 app.UseResponseCompression();
 app.UseRouting();
 app.MapBlazorHub();
+app.UseDeveloperExceptionPage();
 app.UseStaticFiles(new StaticFileOptions
 {
     OnPrepareResponse = ctx => {
@@ -56,6 +64,36 @@ app.UseStaticFiles(new StaticFileOptions
             ctx.Context.Response.Headers["Cache-Control"] = "public,max-age=31536000";
         }
     }
+});
+
+app.MapPost("/api/register", async (RegistrationDto dto) =>
+{
+  TelegramBotClient botClient = new TelegramBotClient("6305344699:AAG5shpez6RiKOBHjCOKeq6T3nzyAb_DdRI");
+  ChatId chatId = new ChatId(-4637825390L);
+  var message = $"Новая регистрация:\n" +
+                $"ФИО: {dto.LastName} {dto.FirstName} {dto.MiddleName}\n" +
+                $"Дата рождения: {dto.BirthDate}\n" +
+                $"Адрес: {dto.Address}\n" +
+                $"Email: {dto.Email}\n" +
+                $"Телефон: {dto.Phone}";
+  await botClient.SendMessage(chatId, message);
+  return Results.Ok(new { status = "ok" });
+});
+
+app.MapPost("/api/checkAddress", async (DadataRequest req) =>
+{
+  var token = "9d29b2603755cdefc6dbf507415674e3ec99a12d";
+  var api = new SuggestClientAsync(token);
+  var result = await api.SuggestAddress(req.query);
+  return result.suggestions.Select(z => z.value).ToList();
+});
+
+app.MapPost("/api/checkFIO", async (DadataRequest req) =>
+{
+  var token = "9d29b2603755cdefc6dbf507415674e3ec99a12d";
+  var api = new SuggestClientAsync(token);
+  var result = await api.SuggestName(req.query);
+  return result.suggestions.Select(z => z.value).ToList();
 });
 
 // Configure the HTTP request pipeline.

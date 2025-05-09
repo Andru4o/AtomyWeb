@@ -12,13 +12,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap" Version="1.7.6" />
+    <PackageReference Include="Dadata" Version="25.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="9.0.4" />
     <PackageReference Include="Microsoft.Net.Sdk.Compilers.Toolset" Version="9.0.203" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Telegram.Bot" Version="22.5.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
 	<ItemGroup>

@@ -1,5 +1,4 @@
-﻿@using AtomyWeb.Components.Layout
-@using System.Globalization
+﻿@using System.Globalization
 <html lang="@CultureInfo.CurrentUICulture.Name">
 <head>
     <meta charset="utf-8" />
@@ -45,6 +44,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.json" />
+    <script src="_framework/blazor.server.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
@@ -76,6 +76,14 @@
       });
     }
     </script>
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+        window.initPhoneMask = (selector) => {
+          var el = document.querySelector(selector);
+          if (!el) return;
+          IMask(el, { mask: '+{7}(000) 000-00-00' });
+        };
+    </script>
     <!-- Yandex.Metrika -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
@@ -92,6 +100,7 @@
              webvisor:true
         });
     </script>
+    <script src="/js/imasked.min.js"></script>
     <noscript>
         <div>
             <img src="https://mc.yandex.ru/watch/YOUR_YANDEX_ID" style="position:absolute; left:-9999px;" alt="" />
